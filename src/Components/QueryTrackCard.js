@@ -1,10 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Card from "react-bootstrap/Card";
-import CardGroup from "react-bootstrap/CardGroup";
-import { useOutletContext } from "react-router-dom";
-import { Button, Col, Row } from "react-bootstrap";
+
+import { Button, Col } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
-export function TrackCard({ track }) {
+export function QueryTrackCard({ track }) {
   const padTo2Digits = (num) => {
     return num.toString().padStart(2, "0");
   };

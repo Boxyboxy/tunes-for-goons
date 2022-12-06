@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import qs from "query-string";
 import { Image, Button } from "react-bootstrap";
-import { TunesForGoonsNav } from "./Components/TunesForGoons";
+import { TunesForGoonsNav } from "./Components/TunesForGoonsNav";
 import { writeUserData } from "./firebase/database";
 function App() {
   const {
@@ -26,7 +26,6 @@ function App() {
       console.log("token null");
       navigate("/login");
     }
-    setAccessToken(window.localStorage.getItem("spotify-token"));
 
     axios
       .get("https://api.spotify.com/v1/me", {
@@ -60,11 +59,11 @@ function App() {
         .then(({ data: user }) => {
           // this data is your user token object from spotify
           setUser(user); // once i refresh the page, the user is logged out
-          setAccessToken(query.access_token);
+
           console.log(query.access_token);
           window.localStorage.setItem("spotify-token", query.access_token);
           navigate(`/home`);
-          // cannot retrieve accessToken from state????
+
           writeUserData(
             user.id,
             user.display_name,

@@ -7,10 +7,10 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Homepage } from "./Components/Homepage";
 import { SpotifyOAuth } from "./Components/SpotifyOAuth";
-import { TrackQueryForm } from "./Components/TrackQueryForm";
-import { TrackCard } from "./Components/TrackCard";
+import { QueryTrackForm } from "./Components/QueryTrackForm";
 import { JournalEntryForm } from "./Components/JournalEntryForm";
 import { UserStats } from "./Components/UserStats";
+import { AccountPage } from "./Components/AccountPage";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -21,10 +21,9 @@ root.render(
         <Route path="login" element={<SpotifyOAuth />} />
         <Route path="home" element={<Homepage />} />
 
-        <Route path="query" element={<TrackQueryForm />}>
-          <Route path="trackId" element={<TrackCard />} />
-        </Route>
+        <Route path="query" element={<QueryTrackForm />} />
         <Route path="statistics" element={<UserStats />} />
+        <Route path="account" element={<AccountPage />} />
 
         <Route path="create" element={<JournalEntryForm />} />
       </Route>

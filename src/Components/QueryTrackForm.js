@@ -9,9 +9,9 @@ import {
 } from "react-bootstrap";
 import axios from "axios";
 
-import { TrackList } from "./TrackList";
+import { QueryTrackList } from "./QueryTrackList";
 
-export function TrackQueryForm({ user }) {
+export function QueryTrackForm({ user }) {
   const [query, setQuery] = useState({
     track: "",
     artist: "",
@@ -23,13 +23,6 @@ export function TrackQueryForm({ user }) {
 
   const handleFormChange = (e) =>
     setQuery((query) => ({ ...query, [e.target.name]: e.target.value }));
-
-  const clearForm = () => {
-    setQuery({
-      track: "",
-      artist: "",
-    });
-  };
 
   const queryTrack = (e) => {
     e.preventDefault();
@@ -118,7 +111,7 @@ export function TrackQueryForm({ user }) {
         </Form.Group>
       </Form>
       {renderResult && queryResult.length > 1 && (
-        <TrackList tracks={queryResult} />
+        <QueryTrackList tracks={queryResult} />
       )}
     </Col>
   );

@@ -3,7 +3,6 @@ import Navbar from "react-bootstrap/Navbar";
 import logo from "../spotify-icons-logos/spotify-icons-logos/icons/01_RGB/02_PNG/Spotify_Icon_RGB_Green.png";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import Nav from "react-bootstrap/Nav";
-import { useEffect } from "react";
 import Image from "react-bootstrap/esm/Image";
 import { Link } from "react-router-dom";
 
@@ -12,7 +11,7 @@ export function TunesForGoonsNav({ user, signOut }) {
     <>
       <Navbar collapseOnSelect bg="dark" variant="dark" expand="lg">
         <Container>
-          <Navbar.Brand href="#home">
+          <Navbar.Brand>
             <Nav.Link as={Link} to="/home">
               <img
                 alt=""
@@ -46,7 +45,9 @@ export function TunesForGoonsNav({ user, signOut }) {
                 }
                 id="basic-nav-dropdown"
               >
-                <NavDropdown.Item href="">Account</NavDropdown.Item>
+                <NavDropdown.Item as={Link} to="/account">
+                  Account
+                </NavDropdown.Item>
                 <NavDropdown.Divider />
                 <NavDropdown.Item onClick={signOut}>Sign Out</NavDropdown.Item>
               </NavDropdown>

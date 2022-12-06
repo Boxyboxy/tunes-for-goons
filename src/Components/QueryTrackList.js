@@ -1,10 +1,9 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Col, Row } from "react-bootstrap";
-import { scryRenderedComponentsWithType } from "react-dom/test-utils";
 
-import { TrackCard } from "./TrackCard";
+import { QueryTrackCard } from "./QueryTrackCard";
 
-export function TrackList({ tracks }) {
+export function QueryTrackList({ tracks }) {
   tracks.forEach((track, index) => console.log(track));
   return (
     <Col className="p-4">
@@ -13,7 +12,7 @@ export function TrackList({ tracks }) {
       <Row>
         {tracks.length ? (
           tracks.map((element, index) => (
-            <TrackCard key={index} track={element} />
+            <QueryTrackCard key={index} track={element} />
           ))
         ) : (
           <Col>No track to display</Col>

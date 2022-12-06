@@ -1,17 +1,36 @@
-import { Image, Button } from "react-bootstrap";
-import { useNavigate, useOutletContext } from "react-router-dom";
+import { useOutletContext } from "react-router-dom";
 import { useEffect, useState } from "react";
+import { createPostListener } from "../firebase/database";
+import { Col } from "react-bootstrap";
+import { JournalEntryList } from "./JournalEntryList";
 
 export function Homepage() {
   const [user, setUser] = useOutletContext();
-  const [accessToken, setAccessToken] = useState("");
+  const [posts, setPosts] = useState([]);
 
   useEffect(() => {
-    console.log(user);
-    console.log(window.localStorage.getItem("spotify-token"));
+    if (user) {
+      createPostListener(user.id, (snapshot) => {
+        const newPosts = [];
+        snapshot.forEach((post) => {
+          newPosts.push({
+            db_id: post.key,
+            ...post.val(),
+          });
+        });
+        setPosts(newPosts);
+      });
+    }
+
+    console.log(posts);
   }, []);
 
-  const navigate = useNavigate();
-
-  return <></>;
+  return (
+    <Col
+      className="d-flex align-items-center flex-column m-auto"
+      style={{ maxWidth: "90%" }}
+    >
+      <JournalEntryList entries={posts} user={user} />
+    </Col>
+  );
 }
