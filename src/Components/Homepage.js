@@ -28,7 +28,7 @@ export function Homepage() {
   return (
     <Col
       className="d-flex align-items-center flex-column m-auto"
-      style={{ maxWidth: "90%" }}
+      style={{ maxWidth: "80%", backgroundColor: "#191414", color: "#1DB954" }}
     >
       <JournalEntryList entries={posts} user={user} />
     </Col>

@@ -7,7 +7,7 @@ export function UserStatsArtistList({ artists }) {
   });
   return (
     <Col className="p-4">
-      <h3>Top Artists</h3>
+      <h3 style={{ color: "#1db954" }}>Top Artists</h3>
 
       <Row>
         {artists.length ? (
@@ -15,7 +15,7 @@ export function UserStatsArtistList({ artists }) {
             <UserStatsArtistCard key={index} artist={element} />
           ))
         ) : (
-          <Col>No artist to display</Col>
+          <Col style={{ color: "#1db954" }}>No artist to display</Col>
         )}
       </Row>
     </Col>

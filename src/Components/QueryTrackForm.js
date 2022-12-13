@@ -52,7 +52,7 @@ export function QueryTrackForm({ user }) {
   return (
     <Col
       className="d-flex align-items-center flex-column m-auto"
-      style={{ maxWidth: "80%" }}
+      style={{ maxWidth: "80%", color: "#1DB954" }}
     >
       <h3>Query Inputs</h3>
       <Form
@@ -60,6 +60,7 @@ export function QueryTrackForm({ user }) {
           setIsLoading(true);
           queryTrack(e);
         }}
+        className="mb-4"
       >
         {error && (
           <Form.Group>
@@ -101,7 +102,7 @@ export function QueryTrackForm({ user }) {
 
         <Form.Group className="d-flex justify-content-center">
           <Button
-            variant="primary"
+            variant="success"
             type="submit"
             className="w-100"
             disabled={!query.track || !query.artist || isLoading}

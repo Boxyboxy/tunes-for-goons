@@ -1,10 +1,9 @@
-import logo from "./spotify-icons-logos/spotify-icons-logos/icons/01_RGB/02_PNG/Spotify_Icon_RGB_Green.png";
 import "./App.css";
 import { Outlet, useLocation, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import qs from "query-string";
-import { Image, Button } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 import { TunesForGoonsNav } from "./Components/TunesForGoonsNav";
 import { writeUserData } from "./firebase/database";
 function App() {
@@ -81,10 +80,16 @@ function App() {
   };
 
   return (
-    <div className="App">
+    <>
       {user && <TunesForGoonsNav user={user} signOut={signOut} />}
-      <Outlet context={[user, setUser]} />
-    </div>
+      <Container
+        fluid={true}
+        className="App"
+        style={{ backgroundColor: "#191414" }}
+      >
+        <Outlet context={[user, setUser]} />
+      </Container>
+    </>
   );
 }
 

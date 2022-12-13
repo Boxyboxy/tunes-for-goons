@@ -24,7 +24,11 @@ export function UserStatsTrackCard({ track, setTrack }) {
   return (
     <Col xs={12} sm={6} md={4} lg={3} className="g-3">
       {track && (
-        <Card style={{ height: "450px", width: "250px" }}>
+        <Card
+          style={{ height: "450px", width: "250px", color: "#1db954" }}
+          bg="dark"
+          border="success"
+        >
           <Card.Title>{track.name}</Card.Title>
           <Card.Img variant="top" src={track.album.images[1].url} />
           <Card.Body style={{ height: "50%" }}>

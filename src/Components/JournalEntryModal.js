@@ -117,7 +117,7 @@ export function JournalEntryModal({ entry, user }) {
             </Button>
           )}
           {edit && (
-            <Button variant="primary" onClick={handleSave}>
+            <Button variant="success" onClick={handleSave}>
               Save changes
             </Button>
           )}

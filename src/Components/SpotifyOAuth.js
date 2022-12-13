@@ -1,10 +1,10 @@
-import logo from "../spotify-icons-logos/spotify-icons-logos/icons/01_RGB/02_PNG/Spotify_Icon_RGB_Green.png";
+import logo from "../spotify-icons-logos/spotify-icons-logos/icons/01_RGB/02_PNG/goon.png";
 import "./SpotifyOAuth.css";
-import { useLocation, useNavigate } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import qs from "query-string";
-import { Image, Button } from "react-bootstrap";
+
 import { writeUserData } from "../firebase/database";
 export function SpotifyOAuth() {
   const {
@@ -16,7 +16,6 @@ export function SpotifyOAuth() {
   const [accessToken, setAccessToken] = useState("");
 
   const location = useLocation();
-  const navigate = useNavigate();
 
   useEffect(() => {
     if (location.hash) {
@@ -57,7 +56,7 @@ export function SpotifyOAuth() {
             target="_blank"
             rel="noreferrer"
           >
-            Login to Spotify
+            Login to Spotify and join the Goon Squad!
           </a>
         )}
       </header>

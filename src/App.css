@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  min-height: 100vh;
 }
 
 .App-logo {
@@ -35,4 +36,44 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.nav .nav-item .nav-link {
+  color: #1db954;
+}
+
+.nav .nav-item .nav-link.active {
+  background-color: #1db954;
+}
+
+.modal-content {
+  background-color: #1db954;
+  color: #1db954;
+  border: 0px solid #1db954 !important;
+}
+.modal-content .modal-header {
+  background-color: #212529;
+  color: #1db954;
+  border: 1px solid #1db954;
+}
+
+.modal-body {
+  background-color: #212529;
+  color: #1db954;
+  border: 1px solid #1db954;
+}
+.modal-content .modal-footer {
+  background-color: #212529;
+  border: 1px solid #1db954;
+}
+
+.list-group .list-group-item {
+  background-color: #212529;
+  color: #1db954;
+  border-color: #1db954;
+  border-style: solid;
+}
+
+.modal-header .btn-close {
+  background-color: #1db954;
 }

@@ -10,7 +10,11 @@ export function UserStatsArtistCard({ artist }) {
   return (
     <Col xs={12} sm={6} md={4} lg={3} className="g-3">
       {artist && (
-        <Card style={{ height: "500px", width: "250px" }}>
+        <Card
+          style={{ height: "500px", width: "250px", color: "#1db954" }}
+          bg="dark"
+          border="success"
+        >
           <Card.Title>{artist.name}</Card.Title>
           <Card.Img variant="top" src={artist.images[2].url} />
           <Card.Body style={{ height: "50%" }}>

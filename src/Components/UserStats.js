@@ -7,7 +7,7 @@ import { UserStatsArtists } from "./UserStatsArtists";
 
 export function UserStats() {
   return (
-    <Tab.Container id="left-tabs-example" defaultActiveKey="short-term">
+    <Tab.Container id="left-tabs-example" defaultActiveKey="tracks">
       <Row>
         <Col sm={3}>
           <Nav variant="pills" className="flex-column">

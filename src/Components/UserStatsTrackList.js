@@ -7,7 +7,7 @@ export function UserStatsTrackList({ tracks, setTrack }) {
   });
   return (
     <Col className="p-4">
-      <h3>Top Tracks</h3>
+      <h3 style={{ color: "#1db954" }}>Top Tracks</h3>
 
       <Row>
         {tracks.length ? (
@@ -19,7 +19,7 @@ export function UserStatsTrackList({ tracks, setTrack }) {
             />
           ))
         ) : (
-          <Col>No track to display</Col>
+          <Col style={{ color: "#1db954" }}>No track to display</Col>
         )}
       </Row>
     </Col>

@@ -36,12 +36,13 @@ export function UserStatsArtists() {
         </Form.Group>
       )}
       <Form.Group className="mb-3">
-        <Form.Label>Time range</Form.Label>
+        <Form.Label style={{ color: "#1db954" }}>Time range</Form.Label>
         <Form.Select
           onChange={(e) => {
             setRange(e.target.value);
             console.log(range);
           }}
+          style={{ color: "#1db954" }}
         >
           <option>Set Duration</option>
           <option value="short_term">Short</option>

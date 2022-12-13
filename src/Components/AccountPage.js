@@ -13,9 +13,14 @@ export function AccountPage() {
   return (
     <Col
       className="d-flex align-items-center flex-column m-auto"
-      style={{ maxWidth: "600px" }}
+      style={{ maxWidth: "600px", color: "#1db954" }}
     >
-      <Card style={{ width: "18rem" }}>
+      <Card
+        style={{ width: "18rem" }}
+        bg="dark"
+        border="success"
+        className="m-4"
+      >
         <Card.Img
           as={Image}
           variant="top"

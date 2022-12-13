@@ -47,7 +47,10 @@ export function JournalEntryForm() {
         className="d-flex align-items-center flex-column m-auto"
         style={{ maxWidth: "80%" }}
       >
-        <Form style={{ width: "50%" }} onSubmit={(e) => handleSubmit(e)}>
+        <Form
+          style={{ width: "50%", color: "#1db954" }}
+          onSubmit={(e) => handleSubmit(e)}
+        >
           <Form.Group className="mb-3" controlId="thoughtsAndFeelings">
             <Form.Label>Thoughts and Feelings</Form.Label>
             <Form.Control
@@ -59,7 +62,7 @@ export function JournalEntryForm() {
           </Form.Group>
 
           <Form.Group className="d-flex justify-content-center">
-            <Button variant="primary" type="submit" className="w-100">
+            <Button variant="success" type="submit" className="w-100">
               Post
             </Button>
           </Form.Group>

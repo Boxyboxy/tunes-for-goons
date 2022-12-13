@@ -19,7 +19,7 @@ export function JournalEntryCard({ entry, user }) {
 
   return (
     <Col xs={12} sm={6} md={4} lg={3} className="g-3">
-      <Card style={{ height: "450px", width: "250px" }}>
+      <Card bg="dark" border="success">
         <Card.Title>{entry.name}</Card.Title>
         <Card.Img variant="top" src={entry.album.images[1].url} />
         <Card.Body style={{ height: "50%" }}>
