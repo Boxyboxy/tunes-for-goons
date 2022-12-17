@@ -11,6 +11,7 @@ import { QueryTrackForm } from "./Components/QueryTrackForm";
 import { JournalEntryForm } from "./Components/JournalEntryForm";
 import { UserStats } from "./Components/UserStats";
 import { AccountPage } from "./Components/AccountPage";
+import { Navigate } from "react-router-dom";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -27,6 +28,8 @@ root.render(
 
         <Route path="create" element={<JournalEntryForm />} />
       </Route>
+
+      <Route path="*" element={<Navigate to="/" />} />
     </Routes>
   </BrowserRouter>
 );
